@@ -1,0 +1,386 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #333;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 2;
+    margin-left: 255px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    color: #00f7a7;
+}
+
+.nav-links a.active {
+    color: #00f7a7;
+    border-bottom: 2px solid #00f7a7;
+}
+
+/* Search bar */
+.search {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: auto;
+    transition: box-shadow 0.3s ease;
+}
+
+.search:focus-within {
+    box-shadow: 0 0 0 2px #00f7a7;
+}
+
+.search input {
+    padding: 8px 15px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    outline: none;
+    width: 200px;
+    font-size: 14px;
+}
+
+.search input::placeholder {
+    color: #888;
+}
+
+.search button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #555;
+}
+
+.search button img {
+    width: 20px;
+    height: 20px;
+}
+
+.login-btn {
+    background-color: #f77;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #f55;
+    transform: translateY(-2px);
+}
+
+/* Main content */
+.main-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #00f7a7;
+}
+
+/* Category filters */
+.category-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    background-color: #2a2a2a;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.filter:hover {
+    background-color: #00f7a7;
+    color: #121212;
+    transform: translateY(-2px);
+}
+
+.filter.active {
+    background-color: #00f7a7;
+    color: #121212;
+}
+
+/* News grid */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.news-item {
+    background-color: #414141;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(145, 145, 145, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 247, 167, 0.1);
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover img {
+    transform: scale(1.05);
+}
+
+.news-info {
+    padding: 20px;
+}
+
+.news-info h3 {
+    color: #00f7a7;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.news-info p {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.news-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.news-meta img {
+    width: 14px;
+    height: 14px;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid #333;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 60px;
+    height: auto;
+}
+
+.footer p {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-links {
+        margin-left: 50px;
+        gap: 20px;
+    }
+
+    .main-content h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+
+    .nav-links {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+        order: 2;
+        margin-top: 10px;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .search {
+        width: 100%;
+        order: 3;
+        margin-top: 10px;
+    }
+
+    .search input {
+        width: 100%;
+    }
+
+    .main-content h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .circle-image {
+        width: 250px;
+        height: 250px;
+        margin: 20px 0;
+        animation: none; /* Disable animation on mobile */
+    }
+
+    .university-name {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .circle-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading animation */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
